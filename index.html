@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My HeroIV</title>
+	<style type="text/css">
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0 auto;
+			background: #ededed;
+			color: #darkgrey;
+		}
+
+		header {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			margin-top: 5px;
+		}
+
+		header h2 {
+			font-family: sans-serif;
+			font-size: 3rem;
+			cursor: pointer;
+		}
+
+		.navigation {
+			list-style: none;
+			display: flex;
+			position: sticky;
+			top: 0;
+			gap: 0.8rem;
+			justify-content: space-evenly;
+			margin-left: 2rem;
+		}
+
+		.navigation li {
+			font-size: 1.5rem;
+		}
+
+		.navigation li a {
+			text-decoration: none;
+			color: unset;
+		}
+
+		.hero {
+			display: flex;
+			flex: 1;
+			justify-content: space-evenly;
+			grid-template-columns: 1fr 1fr;
+			place-items: center;
+			margin: 2rem 0;
+			padding: 4rem 8rem;
+			border-bottom: 2px solid black;
+			z-index: 1;
+			position: relative;
+		}
+
+/*		.hero:before {
+			content: "";
+			background: black;
+			z-index: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.3;
+		}*/
+
+		.hero-text {
+			max-width: 90%;
+			padding: 2rem;
+			position: relative;
+			z-index: 3;
+
+			& h4 {
+				font-size: 1rem;
+				letter-spacing: 0.3em;
+				font-family: sans-serif;
+				line-height: 0;
+			}
+
+			& h1 {
+				font-size: 6rem;
+				margin-bottom: 10px;
+				letter-spacing: 4px;
+			}
+
+			& p {
+				max-width: 60ch;
+			}
+		}
+
+		/* Form style		*/
+
+		.hero-form {
+			display: flex;
+			flex-direction: column;
+			background: rgba(10,10,10, 0.15);
+			padding: 6rem;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			box-shadow: -5px 5px 9px 0 #979E9C;
+			transition: all 0.5s ease;
+			position: relative;
+			z-index: 3;
+
+			& h3 {
+				font-size: 2rem;
+				margin-bottom: 5px;
+
+				& span {
+					color: darkred;
+					text-decoration: underline;
+				}
+			}
+
+			& p {
+				margin-bottom: 20px;
+				text-align: center;
+			}
+
+			& legend {
+				padding: 1rem 0;
+				width: 100%;
+			}
+
+			& .form-control {
+				font-family: sans-serif;
+				margin-bottom: 20px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-direction: row;
+
+			}
+
+			& .form-control input {
+				border: none;
+				outline: none;
+				padding: 16px;
+				border-radius: 5px;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				color: darkred;
+			}
+
+		}
+
+		.hero-form:hover {
+			box-shadow: 5px 5px 9px 0 #979E9C;
+		}
+
+		.form-control-check {
+			display: flex;
+			justify-content: center;
+
+
+			& input {
+				margin-right: 10px;
+			}
+		}
+
+		input::placeholder {
+			color: darkred;
+			opacity: 0.6;
+
+		}
+
+		.form-btn {
+			background: darkred;
+			color: white;
+			font-size: 1.3rem;
+			border: none;
+			outline: none;
+			border-radius: 10px;
+			margin-top: 10px;
+			padding: 1.2rem;
+
+		}
+
+
+		footer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			& .footer-links {
+				display: flex;
+				list-style: none;
+				gap: 5px;
+
+
+			}
+
+			& .footer-links a {
+					text-decoration: none;
+					color: darkred;
+				}
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<h2>HeroIV</h2>
+		<nav class="navigation">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Contact</a></li>
+		</nav>
+	</header>
+
+	<!-- hero section -->
+
+	<main class="hero">
+		<div class="hero-text">
+			<h4>The Ultimate Guide In</h4>
+			<h1>Heroism</h1>
+			<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Quisquam debitis vel blanditiis dignissimos aspernatur quidem inventore autem unde voluptatibus sed velit facere omnis doloribus, odit! Deserunt provident possimus reiciendis, modi.</p>	
+		</div>
+
+		<form class="hero-form">
+			<h3>Get your <span>FREE</span> Heroism Guide!</h3>
+			<p>Just tell us where to send it...</p>
+			
+			<legend class="form-legend">
+				<div class="form-control">
+					<!-- <label for="firstName">First Name:</label> -->
+					<input class="form-input" type="text" name="firstName" id="firstName" placeholder="Enter your first name..." required>
+				</div>
+				<div class="form-control">
+					<!-- <label for="firstName">Email:</label> -->
+					<input class="form-input" type="email" name="firstName" id="firstName" placeholder="Enter your best email..." required>
+				</div>
+				<div class="form-control-check">
+					<input type="checkbox" name="agreeToPromo" id="agreeToPromo" class="form-check">
+					<label for="agreeToPromo">Please send me weekly deals and promo!</label>
+				</div>
+			</legend>
+
+			<button class="form-btn" onclick="alert('This does not work!');">Send me my FREE Copy!</button>
+			
+		</form>
+		
+	</main>
+
+	<footer>
+		<div class="copyright">
+			<p>Made by Isaiah Vickers</p>
+			<p>Copyright © 2023 HeroIV</p>
+		</div>
+		<div>
+			<nav class="footer-links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>
